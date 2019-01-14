@@ -1,0 +1,9 @@
+---
+vagrant:
+  hosts:
+    dockerhost:
+  vars:
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
+    ansible_user: vagrant
+    ansible_become_pass: vagrant
+    ansible_ssh_private_key_file: ".vagrant/machines/{{ inventory_hostname }}/virtualbox/private_key"

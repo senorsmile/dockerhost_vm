@@ -1,0 +1,18 @@
+---
+- hosts:
+    - dockerhosts
+  gather_facts: False
+  become: True
+  roles:
+    - role: bootstrap-os
+      tags: boostrap
+
+- hosts:
+    - dockerhosts
+  gather_facts: True
+  become: True
+  roles:
+    - role: senorsmile.docker
+      tags:
+          - senorsmile.docker
+          - docker

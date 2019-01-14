@@ -1,0 +1,8 @@
+---
+dockerhosts:
+  hosts:
+    dockerhost:
+      ansible_host: 192.168.82.101
+  vars:
+    docker_remote_access: True
+    docker_remote_access_ip: "{{ ansible_host }}"
